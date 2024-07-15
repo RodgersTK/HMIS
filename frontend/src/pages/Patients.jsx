@@ -1,18 +1,18 @@
-import React from 'react'
-import PatientForm from '../components/PatientForm'
-import Menu from '../components/Menu'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import React from 'react';
+import PatientForm from '../components/PatientForm';
+import Menu from '../components/Menu';
+import Header from '../components/Header';
+
 
 function Patients() {
   return (
     <div>
-      <Header/>
-        <Menu/>
-        <PatientForm/>
-        <Footer/>
+      <Header />
+      <Menu />
+      <PatientForm />
+
     </div>
-  )
+  );
 }
 
-export default Patients
+export default Patients;

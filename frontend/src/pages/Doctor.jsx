@@ -1,20 +1,20 @@
-import React from 'react'
-import DoctorForm from '../components/DoctorForm'
-import DoctorTable from '../components/DoctorTable'
-import Menu from '../components/Menu'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import React from 'react';
+import DoctorForm from '../components/DoctorForm';
+import DoctorTable from '../components/DoctorTable';
+import Menu from '../components/Menu';
+import Header from '../components/Header';
+
 
 function Doctor() {
   return (
     <div>
-      <Header/>
-        <Menu/>
-        <DoctorForm/>
-        <DoctorTable/>
-        <Footer/>
+      <Header />
+      <Menu />
+      <DoctorForm />
+      <DoctorTable />
+
     </div>
-  )
+  );
 }
 
-export default Doctor
+export default Doctor;

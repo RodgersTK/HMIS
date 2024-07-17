@@ -62,9 +62,9 @@ function AppointmentTable() {
                         <td>{item.patient.age}</td>
                         <td>{item.staff.name}</td>
                         <td>
-                        <Link to={`https://hmis-fc3p.onrender.com/appointments/${item.id}`}>More</Link></td>
+                        <Link to={`/appointments/${item.id}`}>More</Link></td>
                         <td><Button variant='danger' onClick={() => handleDelete(item.id)}>Delete</Button></td>
-                        <td><Button variant='success'><Link to={`https://hmis-fc3p.onrender.com/appointments/${item.id}/edit`} className="link">Update</Link></Button></td>
+                        <td><Button variant='success'><Link to={`/appointments/${item.id}/edit`} className="link">Update</Link></Button></td>
                     </tr>
                     ))}
                 </tbody>

@@ -42,7 +42,7 @@ function AppointmentTable() {
                     <ListGroup.Item>Appointment with: {appointments.staff.name}</ListGroup.Item>
                     <ListGroup.Item>Patient age: {appointments.patient.age}</ListGroup.Item>
                     <Card.Text>
-                        <Button className='mt-4' variant="success"><Link to={`https://hmis-fc3p.onrender.com/appointments/${appointments.id}/edit`} className="link">Update</Link></Button>
+                        <Button className='mt-4' variant="success"><Link to={`/appointments/${appointments.id}/edit`} className="link">Update</Link></Button>
                     </Card.Text>
                 </ListGroup>
                 

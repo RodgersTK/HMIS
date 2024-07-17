@@ -12,7 +12,7 @@ function AppointmentEditForm() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch(`https://hmis-fc3p.onrender.com/appointments/${id}`);
+                const response = await fetch(`/appointments/${id}`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -28,7 +28,7 @@ function AppointmentEditForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`https://hmis-fc3p.onrender.com/appointments/${appointment.id}`, {
+        fetch(`/appointments/${appointment.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +38,7 @@ function AppointmentEditForm() {
             }),
         }).then((r) => {
             if (r.ok) {
-                history.push(`https://hmis-fc3p.onrender.com/appointments`);
+                history.push(`/appointments`);
                 // alert("Successfully updated appointment!");
                 return r.json()
             } else {

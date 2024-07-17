@@ -5,6 +5,7 @@ from flask_migrate import Migrate
 from flask_restful import Api, Resource
 from werkzeug.exceptions import NotFound
 import os
+from flask_cors import CORS
 
 # from flask_Bcrypt import Bcrypt
 from dotenv import load_dotenv
@@ -19,6 +20,7 @@ app = Flask(
     static_folder="../frontend/build",
     template_folder="../frontend/build",
 )
+CORS(app)
 # bcrypt = Bcrypt(app)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///hospital.db"
 

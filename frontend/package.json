@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5555",
+  "proxy": "https://hmis-fc3p.onrender.com",
   "engines": {
     "node": ">=16.0.0"
   },

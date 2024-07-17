@@ -9,7 +9,7 @@ function PatientTable() {
     useEffect(() => {
         async function fetchPatients() {
             try {
-                await fetch('/patients')
+                await fetch('https://hmis-fc3p.onrender.com/patients')
                     .then(response => response.json())
                     .then(data => setPatients(data));
             } catch (error) {

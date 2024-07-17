@@ -30,7 +30,7 @@ function PatientForm() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch('/patients', {
+      const response = await fetch('https://hmis-fc3p.onrender.com/patients', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

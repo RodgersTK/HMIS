@@ -18,7 +18,9 @@ const linkStyles = {
 const activeLinkStyles = {
   background: '#007bff',
 };
-
+const Login = () =>{
+  alert("Coming soon!")
+}
 function Menu() {
   return (
       <div style={navStyles}>
@@ -34,8 +36,8 @@ function Menu() {
       <NavLink to="/appointments" exact style={linkStyles} activeStyle={activeLinkStyles}>
         Appointment
       </NavLink>
-      <NavLink to="/logout" exact style={linkStyles} activeStyle={activeLinkStyles}>
-        Log Out
+      <NavLink to="#" onClick={Login} exact style={linkStyles} activeStyle={activeLinkStyles}>
+        Log In
       </NavLink>
     </div>
   )

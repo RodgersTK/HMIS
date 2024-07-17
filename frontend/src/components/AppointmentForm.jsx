@@ -15,13 +15,13 @@ function AppointmentForm() {
 
   
     useEffect(() => {
-        fetch("/staffs")
+        fetch("https://hmis-fc3p.onrender.com/staffs")
             .then((r) => r.json())
             .then(setStaffs);
         }, []);
 
     useEffect(() => {
-        fetch("/patients")
+        fetch("https://hmis-fc3p.onrender.com/patients")
             .then((r) => r.json())
             .then(setPatients);
     }, []);
@@ -35,7 +35,7 @@ function AppointmentForm() {
             appointment_type,
         };
         try {
-            const response = await fetch('/appointments', {
+            const response = await fetch('https://hmis-fc3p.onrender.com/appointments', {
                 method: 'POST',
                 body: JSON.stringify(formData),
                 headers: {

@@ -9,7 +9,7 @@ function DoctorTable() {
     useEffect(() => {
         async function fetchDoctors() {
             try {
-                await fetch('/staffs')
+                await fetch('https://hmis-fc3p.onrender.com/staffs')
                     .then(response => response.json())
                     .then(data => setDoctors(data));
             } catch (error) {

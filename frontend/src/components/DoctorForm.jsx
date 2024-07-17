@@ -26,7 +26,7 @@ function DoctorForm() {
         e.preventDefault();
         setLoading(true);
         try {
-          const response = await fetch('/staffs', {
+          const response = await fetch('https://hmis-fc3p.onrender.com/staffs', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

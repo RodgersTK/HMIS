@@ -9,7 +9,7 @@ function AppointmentTable() {
     useEffect(()=>{
         async function fetchData(){
             try{
-                await fetch('/appointments')
+                await fetch('https://hmis-fc3p.onrender.com/appointments')
                 .then(response => response.json())
                 .then(data => setAppointments(data))
             }catch (error){
@@ -21,7 +21,7 @@ function AppointmentTable() {
     // console.log(appointments)
 
     function handleDelete(id) {
-        fetch(`/appointments/${id}`, {
+        fetch(`https://hmis-fc3p.onrender.com/appointments/${id}`, {
             method: "DELETE",
             }).then((r) => {
             if (r.ok) {
@@ -62,9 +62,9 @@ function AppointmentTable() {
                         <td>{item.patient.age}</td>
                         <td>{item.staff.name}</td>
                         <td>
-                        <Link to={`/appointments/${item.id}`}>More</Link></td>
+                        <Link to={`https://hmis-fc3p.onrender.com/appointments/${item.id}`}>More</Link></td>
                         <td><Button variant='danger' onClick={() => handleDelete(item.id)}>Delete</Button></td>
-                        <td><Button variant='success'><Link to={`/appointments/${item.id}/edit`} className="link">Update</Link></Button></td>
+                        <td><Button variant='success'><Link to={`https://hmis-fc3p.onrender.com/appointments/${item.id}/edit`} className="link">Update</Link></Button></td>
                     </tr>
                     ))}
                 </tbody>
